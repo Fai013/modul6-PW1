@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreTest</title>
+   
+    <script src="./../JS/jquery-3.7.1.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005663;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 300px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleImage">Tampilkan Gambar</button>
+    <br>
+  
+    <img id="gambar" src="flowers.png" alt="Contoh Gambar">
+    <script>
+       
+        $(document).ready(function () {
+
+            $("#toggleImage").click(function () {
+                $("#gambar").toggle();
+                if ($("#gambar").is(":visible")) {
+                    $("#toggleImage").text("Sembunyikan Gambar");
+                } else {
+                    $("#toggleImage").text("Tampilkan Gambar");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
